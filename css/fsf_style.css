@@ -1,0 +1,346 @@
+@media screen and (max-width: 52.5em){
+  .fs-title{
+    padding: 20px;
+  }
+}
+
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  background-color: #3b3f45;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, label {
+  font-family: 'Raleway';
+}
+
+.fs-title {
+	padding: 50px 50px;
+	margin-bottom: 50px;
+	background: #7B85AD;
+}
+
+#form-wrap{
+	margin: 0 auto;
+	width: 75%;
+	overflow-y: hidden;
+}
+
+ol{
+	list-style: none;
+	position: absolute;
+	top: 45%;
+}
+
+ol > li{
+	display: flex;
+	flex-direction: column;
+	font-size: 2rem;
+	
+}
+
+#form-wrap textarea{
+	outline: none;
+	width: 100%;
+	height: 10rem;
+	background: transparent;
+	border: 3px solid #2f3237;
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #fff;
+}
+
+input[type="text"],input[type="email"], input[type="number"]{
+	width: 100%;
+	padding: 1rem;
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #fff;
+	outline: none;
+	background: transparent;
+	border: none;
+	border-bottom: 3px solid #2f3237;
+}
+
+input:required{
+	background-image: url('../images/svg/asterisk.svg');
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position: top right;
+}
+
+/*dollar dollar bill ya'll*/
+.fields, input.money {
+    padding-left: 1.25em;
+    background-image: url(http://tympanus.net/Development/FullscreenForm/img/dollar.svg);
+    background-position: 0% .5em;
+    background-size: auto 55%;
+    background-repeat: no-repeat;
+}
+
+
+li label[data-info]::before{
+	position: absolute;
+	content: attr(data-info);
+	bottom: 100%;
+	font-size: 16px;
+	color: #7c8c7c;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+label[data-info]::after{
+	content: "i";
+	display: inline-block;
+	margin-left: 10px;
+	vertical-align: top;
+	width: 20px;
+	height: 20px;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 18px;
+	font-style: italic;
+	font-family: serif;
+	border: 2px solid #2f3237;
+	border-radius: 50%;
+	color: #2f3237;
+	cursor: pointer;
+}
+
+li label[data-info]:hover::before{
+	opacity: 1;
+}
+
+.fa {
+ color: rgb(41,44,48); 
+}
+
+/* Radio Group Question */
+.cs-field-label{
+	margin-bottom: 30px;
+}
+
+#cs-radio-group{
+	display: flex;
+	flex-direction: row;
+	perspective: 1000px;
+
+}
+
+#cs-radio-group div{
+	text-align: center;
+	margin-left: 2rem;
+	font-weight: bold;
+	font-size: 1rem;
+	height: 10rem;
+	width: 10rem;
+	padding: 3rem 0;
+	color: black;
+	vertical-align: center;
+	border-radius: 50%;
+	opacity: 0.75;
+	transform: scale(0.9);
+	transition: all ease-in 0.2s;
+	border: 3px solid #2f3237;
+}
+
+#cs-radio-group div:hover, #cs-radio-group input:checked + div{
+	opacity: 1;
+	transform: scale(1);
+	box-shadow: 0px 10px 50px rgba(254,195,197,0.2);
+	color: #fff;
+}
+
+#cs-radio-group input:checked + div{
+	border: 4px solid #F27073;
+
+}
+
+.radio1{
+	background: #D4C66A;
+}
+
+.radio2{
+	background: #515E91;
+}
+
+.radio3{
+	background: #AA7239;
+}
+
+
+#cs-radio-group input{
+	display: none;
+}
+
+/* END Radio Group Question */
+
+
+.anim-up-out{
+	transition: all ease-in 0.5s;
+	transform: translateY(-300px);
+	opacity: 0;
+}
+
+.anim-up-in{
+	transition: all ease-in 0.5s;
+	transform: translateY(-50%);
+	opacity: 1;
+}
+
+
+
+.anim-down-in{
+
+}
+
+.unhide{
+	visibility: none;	
+	
+}
+
+.hide{
+	display: none;
+}
+.current{
+	display: initial;
+	
+	opacity: 1;
+}
+
+/* Button and Radio Progress Bar */
+.show {
+	visibility: visible !important;
+}
+
+#continue {
+	position: absolute;
+	right: 0;
+	bottom: 1.25em;
+	margin: 0 0px 60px 0;
+	font-size: 1.25rem;
+}
+
+
+button.submit, button#continue {
+	padding: 0.5em 1em;
+	border: 3px solid #2b2e33;
+	border-radius: 10%;
+	font-weight: 800;
+	color: rgba(0,0,0,0.4);
+	background-color: #3b3f45;
+	outline: none;
+	margin-right: 1em;
+}
+
+button.submit, button#continue:hover {
+	background-color: white;
+	color: #2b2e33;
+	transition: all ease-in 0.2s;
+}
+
+#continue::after {
+	position: absolute;
+	top: 100%;
+	left:0;
+	width: 100%;
+	line-height: 3;
+	text-align: center;
+	background: transparent;
+	color: rgba(0,0,0,0.3);
+	content: 'or press ENTER';
+	font-size: 0.7em;
+	pointer-events: none;
+}
+
+#nav-dots button {
+	border: none;
+	background: none;
+}
+
+#nav-dots {
+	position: absolute;
+	top: 50%;
+	right: 60px;
+	left: auto;
+	transform: translateY(-50%);
+}
+
+#nav-dots button:hover::before,
+#nav-dots button.dot-current::before {
+	background: #b10be7;
+}
+
+#nav-dots button {
+	position: relative;
+	display: block;
+	padding: 0;
+	margin: 16px 0;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: transparent;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+#nav-dots button::before,
+#nav-dots button::after {
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-color: rgba(0,0,0,0.5);
+	content: '';
+	text-indent: 0;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+form-wrap input:focus,
+form-wrap button:focus {
+	outline: none;
+}
+
+#nav-dots button.dot-current {
+	-webkit-transform: perspective(1000px) rotate3d(0,1,0,180deg);
+	transform: perspective(1000px) rotate3d(0,1,0,180deg);
+}
+
+/* END Button and Radio Progress Bar */
+
+/* Numbers */
+.numbers {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	overflow: hidden;
+	color: rgba(0,0,0,0.4);
+	margin: 40px;
+	
+	font-weight: 800;
+	font-size: 2em;
+	font-family: 'Raleway', serif;
+}
+
+/* END Numbers*/
+
+
+/*Progress bar*/
+#progress {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 0.5em;
+	background: #b10be7;
+}

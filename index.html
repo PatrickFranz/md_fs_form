@@ -1,11 +1,94 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>UI Ninja Skillz</title>
+  <meta charset="UTF-8" />
+  <title>MD Hackathon - Full Screen Form</title>
+  <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/fsf_style.css">
 </head>
 <body>
-	<div></div>
+  <div class="container">
+    <div class="fs-title">
+      <h1>Full Screen Form</h1>
+      <h2>Team: grounded-monkeys</h2>
+      <i class="fa fa-arrow-left dark"></i>
+      <i class="fa fa-tint"></i>
+      <i class="fa fa-question-circle"></i>
+    </div>
+    <div id="form-wrap">
 
+      <form id="my-form" class="" autocomplete="off">
+        <ol>
+          <li class="current">
+            <label class="" for="q1">Let's start with your name.</label>
+            <input class="" id="q1" name="q1" type="text" placeholder="James Dean" required />
+          </li>
+          <li>
+            <label class="" for="q2" data-info="We won't send you spam, we promise...">What's your email address?
+            </label>
+            <input class="" id="q2" name="q2" type="email" placeholder="example@mysite.com" required/>
+          </li>
+          <li>
+            <label class="cs-field-label" for="q3" data-info="This will help us know what kind of services you need">How can we help you grow your business?</label>
+
+            <div id="cs-radio-group">
+              <label for="q3a" class="radio-advertising">
+                <input id="q3a" name="q3" type="radio" value="advertising">
+                <div class="radio1">
+                  <img src="images/megaphone-1.png" />
+                  <p>Paid Advertising</p>
+                </div>
+              </label>
+              <label class="radio-seo" for="q3b">
+                <input id="q3b" name="q3" type="radio" value="seo">
+                <div class="radio2">
+                  <img src="images/analytics.png" alt=""/>
+                  <p>SEO</p>
+                </div>
+              </label>
+              <label class="radio-mobile" for="q3c">
+                <input id="q3c" name="q3" type="radio" value="mobile">
+                <div class="radio3">
+                  <img src="images/chat.png"/>
+                  <p>Mobile Marketing</p>
+                </div>
+              </label>
+            </div> 
+          </li>
+          <li> 
+            <label for="q4" class="">Describe your ideal customer. Who's your target market?</label>
+            <textarea class='input' name="q4" id="q4" placeholder="Tell us about your target customer here."></textarea>
+          </li>
+          <li>
+            <label class="" for="q5">What's your monthly budget?</label>
+            <input class="" id="q5" name="q5" type="number" placeholder="0" step="100" min="100">
+          </li>
+        </ol>
+        <!-- /fields -->
+      </form>
+      <!-- /form -->
+      <div class="controls">
+        <button id="continue">Continue</button>
+        <nav id="nav-dots">
+          <button class="dot-current"></button>
+          <button disabled></button>
+          <button disabled></button>
+          <button disabled></button>
+          <button disabled></button>
+          <button disabled></button>
+          <button disabled></button>
+        </nav>
+        <span class="numbers">
+          <span id="number-current">1</span>
+          <span class="number-total">/ 5</span>
+        </span>
+        <div id="progress"></div>
+      </div>
+      <span class="message-error"></span>
+    </div>
+    <!-- /form wrap -->
+   </div>  
+  <!-- /container -->
+  <script type="text/javascript" src="js/fsf.js"></script>
 </body>
 </html>
